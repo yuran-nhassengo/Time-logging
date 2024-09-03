@@ -1,23 +1,28 @@
 import React from 'react'
 import { TimerForm } from './TimerForm';
+import { Timer } from './Timer';
 
-export const EditableTimer = ({isOpen}) => {
+export const EditableTimer = ({title,project,elapsed,runnungSince,editFormOpen}) => {
   
    
-        if (isOpen){
+        if (editFormOpen){
 
             return (
               <div>
-                <TimerForm/>
+                <TimerForm
+                title={title}
+                project={project}/>
               </div>
             );
 
         } else {
 
             return (
-              <div>
-                false
-              </div> 
+              <Timer
+              title={title}
+              project={project}
+              elapsed={elapsed}
+              runnungSince={runnungSince}/>
             );
 
       }

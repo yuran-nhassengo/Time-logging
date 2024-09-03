@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Timer = ({title,project,elapsed}) => {
+export const Timer = ({title,project,elapsed,runningSince}) => {
     const elapsedString = elapsed
   return (
     <div>
